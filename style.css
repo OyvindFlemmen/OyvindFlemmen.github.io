@@ -44,7 +44,7 @@ body::before {
   }
 
 }
-
+/*LW*/
 video{
   max-width: 100%;
 }
@@ -52,7 +52,7 @@ iframe{
   width: 100%;
 }
 
-
+/*LW*/
 a {
   /*color: #18d26e;*/
   color:rgb(207, 0, 0);
