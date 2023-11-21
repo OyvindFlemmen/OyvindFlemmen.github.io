@@ -38,7 +38,20 @@ body::before {
   body::before {
     background-attachment: fixed;
   }
+  /*LW*/
+  iframe{
+    height:700px;
+  }
+
 }
+
+video{
+  max-width: 100%;
+}
+iframe{
+  width: 100%;
+}
+
 
 a {
   /*color: #18d26e;*/
@@ -293,6 +306,7 @@ h6 {
   right: 15px;
   top: 15px;
 }
+
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
