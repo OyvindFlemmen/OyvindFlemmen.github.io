@@ -10,17 +10,22 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  /*font-family: "Open Sans", sans-serif;*/
   background-color: #040404;
   color: #fff;
   position: relative;
   background: transparent;
+  
+  /*LW Task*/
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size:medium;
+  font-weight: 900;
 }
 
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #040404 url("bg.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -36,13 +41,20 @@ body::before {
 }
 
 a {
-  color: #18d26e;
+  /*color: #18d26e;*/
+  color:rgb(207, 0, 0);
   text-decoration: none;
 }
 
+
 a:hover {
-  color: #35e888;
+  /*LW*/
+  /*color: #35e888;*/
+  color:red;
   text-decoration: none;
+}
+a:active{
+  color:white;
 }
 
 h1,
@@ -361,7 +373,9 @@ section.section-show {
 
 section .container {
   background: rgba(0, 0, 0, 0.9);
-  padding: 30px;
+  /*LW*/
+  /*padding: 30px;*/
+  padding:60px;
 }
 
 @media (max-width: 768px) {
@@ -635,8 +649,11 @@ section .container {
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /*LW*/
+  /*margin-top: 20px;
+  margin-bottom: 20px;*/
+  margin-top: 10px;
+  margin-bottom: 40px;
   color: #fff;
 }
 
@@ -1136,15 +1153,21 @@ section .container {
 
 .contact .php-email-form button[type=submit] {
   background: #18d26e;
-  border: 0;
+  /*border: 0;*/
   padding: 10px 30px;
   color: #fff;
   transition: 0.4s;
-  border-radius: 4px;
+  /*LW*/
+  /*border-radius: 4px;*/
+  border-radius: 100px;
+  border-width: 2px;
+  border-color: white;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #15bb62;
+  /*LW*/
+  /*background: #15bb62;*/
+  background-color: aqua;
 }
 
 @keyframes animate-loading {
