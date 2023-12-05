@@ -15,3 +15,15 @@ function changeImg(index){
     //Sets the image source
     img.src = imageSources[imgIndex];
 }
+
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+    let bt = document.getElementById("aboutImg");
+
+    bt.addEventListener("click", function() {
+        changeImg(1);
+    });
+});
+*/
+
