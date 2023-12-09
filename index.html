@@ -7,12 +7,17 @@
     <meta charset="UTF-8">
     <meta name="Author" content="Øyvind Flemmen">
     <link rel="icon" type="image/x-icon" href="smile.png">
+    <!--
+        <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js"></script>
+
+    -->
+    <script type="module" src="firestore.module.js"></script>
     <script src="LW.js"></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <meta content="" name="description">
     <meta content="" name="keywords">
-
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -60,7 +65,7 @@
                     <li><a class="nav-link" href="#resume">Resume</a></li>
                     <li><a class="nav-link" href="#services">Services</a></li>
                     <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="#disc">Forum</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -894,8 +899,48 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="disc" class="disc">
         <div class="container">
+
+            <div class="section-title">
+                <h2>Forum</h2>
+                <div>
+                    <p>Discussions</p>
+                    <script src="https://accounts.google.com/gsi/client" async></script>
+                    <div id="g_id_onload"
+                        data-client_id="733106814601-hdcqtphrjngq4o36vdou2941lqkq7jdq.apps.googleusercontent.com"
+                        data-login_uri=""
+                        data-callback="handleCredentialResponse"
+                        data-auto_prompt="false">
+                    </div>
+                    <div class="g_id_signin"
+                        id="google-sign-in-btn"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
+                </div>
+            </div>
+
+            <div id="disc-grid-container" class="grid-container">
+
+            </div>
+
+
+            <form class="message-form" onsubmit="return false">
+                <div class="disc-message-div">
+                        <textarea id="discussion-message" data-username="" data-pfp="" class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        <button class='disc-msg-btn' id="disc-msg-btn">Send Message</button>
+                </div>
+            </form>
+
+
+            <script type="module" src="discussions.module.js"></script>
+
+            <!-- OLD SECTION
 
             <div class="section-title">
                 <h2>Contact</h2>
@@ -965,6 +1010,8 @@
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+            -->
+
 
         </div>
     </section><!-- End Contact Section -->

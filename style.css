@@ -48,6 +48,29 @@ mtable{
   }
 
 }
+
+
+.disc-grid-item{
+  margin: 10px 30px;
+  border-radius: 3px;
+  padding: 10px 70px;
+  background-color: rgba(24, 24, 24, 0.6);
+
+  color:darkgrey
+
+}
+.disc-img{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -60px;
+  border-radius: 50%;
+}
+
+.disc-body-text{
+  color: whitesmoke;
+  font-size: 14px;
+}
+
 /*LW*/
 video{
   max-width: 100%;
@@ -1043,6 +1066,8 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
+/*
 .contact .info-box {
   color: #444444;
   padding: 20px;
@@ -1173,6 +1198,145 @@ section .container {
 .contact .php-email-form textarea {
   padding: 12px 15px;
 }
+*/
+
+.disc .info-box {
+  color: #444444;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.disc .info-box i.bx {
+  font-size: 24px;
+  color: #18d26e;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.disc .info-box h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+.disc .info-box p {
+  padding: 0;
+  color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.disc .info-box .social-links {
+  margin: 5px 0 0 68px;
+  display: flex;
+}
+
+.disc .info-box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.disc .info-box .social-links a:hover {
+  color: #18d26e;
+}
+
+.disc .message-form {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.disc .message-form .error-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.disc .message-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.disc .message-form .sent-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.disc .message-form .loading {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 15px;
+}
+
+.disc .message-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.disc .message-form input,
+.disc .message-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.disc .message-form input:focus,
+.disc .message-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.disc .message-form input::-moz-placeholder,
+.disc .message-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.disc .message-form input::placeholder,
+.disc .message-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.disc .message-form input {
+  padding: 10px 15px;
+}
+
+.disc .message-form textarea {
+  padding: 12px 15px;
+  flex:1;
+}
+
+.disc .message-form div{
+  display: flex;
+  align-items: center;
+}
+
 
 .imgChange{
   background: #18d26e;
@@ -1185,7 +1349,7 @@ section .container {
   border-radius: 2px;
 }
 
-.contact .php-email-form button[type=submit] {
+.disc-msg-btn {
   background: #18d26e;
   /*border: 0;*/
   padding: 10px 30px;
@@ -1196,13 +1360,16 @@ section .container {
   border-radius: 100px;
   border-width: 2px;
   border-color: white;
+  margin-left: 10px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.disc-msg-btn:hover {
   /*LW*/
   /*background: #15bb62;*/
   background-color: aqua;
 }
+
+
 
 @keyframes animate-loading {
   0% {
