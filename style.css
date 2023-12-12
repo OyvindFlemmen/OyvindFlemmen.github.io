@@ -38,6 +38,18 @@ mtable{
   border:2px white;
 }
 
+
+
+.disc-grid-item{
+  margin: 20px -30px;
+  border-radius: 3px;
+  padding: 10px 70px;
+  background-color: rgba(24, 24, 24, 0.6);
+  
+  color:darkgrey
+  
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -46,19 +58,24 @@ mtable{
   iframe{
     height:700px;
   }
-
+  .disc-grid-item{
+    margin: 10px 30px;
+  }
+  .disc-textarea{
+    width: 950px;
+  }
+}
+@media (max-width: 992px){
+  .disc-message-div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .disc-textarea{
+    width: 220px;
+  }
 }
 
-
-.disc-grid-item{
-  margin: 10px 30px;
-  border-radius: 3px;
-  padding: 10px 70px;
-  background-color: rgba(24, 24, 24, 0.6);
-
-  color:darkgrey
-
-}
 .disc-img{
   position: absolute;
   margin-top: 5px;
@@ -1401,6 +1418,10 @@ section .container {
     text-align: center;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  .disc-msg-btn{
+    margin:10px 40px;
   }
 }
 

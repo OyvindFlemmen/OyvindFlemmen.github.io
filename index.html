@@ -932,8 +932,12 @@
 
             <form class="message-form" onsubmit="return false">
                 <div class="disc-message-div">
-                        <textarea id="discussion-message" data-username="" data-pfp="" class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        <button class='disc-msg-btn' id="disc-msg-btn">Send Message</button>
+                        <div>
+                            <textarea id="discussion-message" data-username="" data-pfp="" class="disc-textarea" name="message" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        <div>
+                            <button class='disc-msg-btn' id="disc-msg-btn">Send Message</button>
+                        </div>
                 </div>
             </form>
 
