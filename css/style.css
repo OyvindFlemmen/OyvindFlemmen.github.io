@@ -20,3 +20,44 @@
     list-style: none;
     font-weight: 350;
 }
+
+
+main {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(3px) brightness(0.7);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+main > * {
+    position: relative;
+    z-index: 1;
+    max-width: 1800px;
+    padding: 0 100px;
+}
+
+.page-title{
+    padding-bottom: 1vh;
+}
