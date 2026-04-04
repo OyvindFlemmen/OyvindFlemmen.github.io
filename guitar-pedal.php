@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
 
 <!-- Main content -->
-<main class="col-lg-10 p-4" style="--bg-image: url('<?php echo $bg; ?>')">
+<main class="col-lg-10 p-4 left-centered" style="--bg-image: url('<?php echo $bg; ?>')">
     <h1 class="page-title">What is a Guitar Pedal?</h1>
     <div class="page-text">
         <p>

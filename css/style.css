@@ -21,18 +21,27 @@
     font-weight: 350;
 }
 
+.hero-section{
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-centered{
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
 
 main {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
     color: white;
-
-    display: flex;             
-    flex-direction: column;    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
 }
 
@@ -60,4 +69,13 @@ main > * {
 
 .page-title{
     padding-bottom: 1vh;
+}
+
+h4{
+    padding-bottom: 10px;
+}
+
+.tool-image{
+    width: 100px;
+    height:auto;
 }
