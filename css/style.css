@@ -75,7 +75,7 @@ h4{
     padding-bottom: 10px;
 }
 
-.tool-image{
+.tool-image, .source-image{
     width: 100px;
     height:auto;
 }
