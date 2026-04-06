@@ -1,14 +1,14 @@
 
-.title-link, .title-link:visited, .nav-link, .nav-link:visited{
+.title-link, .title-link:visited, .nav-link, .nav-link:visited, .link-light{
     color:inherit;
     text-decoration:none;
 }
 
-.title-link:hover, .nav-link:hover{
+.title-link:hover, .nav-link:hover, .link-light:hover{
     text-decoration:underline;
 }
 
-.title-link:active, .nav-link:active{
+.title-link:active, .nav-link:active, .link-light:active{
     color:#aaa;
 }
 
@@ -78,4 +78,22 @@ h4{
 .tool-image{
     width: 100px;
     height:auto;
+}
+
+.device-image{
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.comparison-table{
+    width: 1600px;
+    border-collapse: collapse;
+    margin-left: 6rem;
+}
+
+.comparison-table th, .comparison-table td{
+    border:1px solid white;
+    padding: 4px;
+    text-align: left;
 }

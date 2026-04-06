@@ -10,18 +10,19 @@ include 'includes/header.php';
     <div class="d-flex gap-5 align-items-center mb-5">
         <img src="images/stm32cubeide_logo.png" class="tool-image">
         <p>
-            The device uses an STM-family MCU, and thus, the STM32CubeIDE will be the primary development environment for this project. 
-            This software integrates hardware configuration through STM32CubeMX, which allows for easier pin and peripheral configuration. 
-            STM32CubeIDE also includes tools for firmware deployment and debugging, simplifying the development and testing of the device. 
+            The device uses an STM-family MCU, and thus, the <a class="link-light" href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> 
+            will be the primary development environment for this project. This software integrates hardware configuration through <a class="link-light" href="https://www.st.com/en/development-tools/stm32cubemx.html">STM32CubeMX</a>, which allows for easier pin and peripheral configuration. 
+            <a class="link-light" href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> also includes tools for firmware deployment and debugging, simplifying the development and testing of the device. 
         </p>
     </div>
 
     <div class="d-flex gap-5 align-items-center mb-5">
         <img src="images/altium_designer_logo.png" class="tool-image">
         <p>
-            Altium Designer will be used to design the PCB. The extensive component library and automatic design-rule checking reduce the time required for designing custom component 
+            <a class="link-light" href="https://www.altium.com/altium-designer">Altium Designer</a> will be used to design the PCB. The extensive component library and automatic design-rule checking reduce the time required for designing custom component 
             footprints and lower the risk of layout errors. The integrated rules checker also ensures that the PCB is compliant with recommended electrical and manufacturing standards. 
-            Free alternatives, such as KiCad, were considered; however, Altium Designer was selected due to its more expansive toolset and component library. 
+            Free alternatives, such as <a class="link-light" href="https://www.kicad.org/">KiCad</a>, were considered; however, <a class="link-light" href="https://www.altium.com/altium-designer">Altium Designer</a> 
+            was selected due to its more expansive toolset and component library. 
         </p>
     </div>
 
@@ -29,7 +30,7 @@ include 'includes/header.php';
         <img src="images/audacity_logo.png" class="tool-image">
         <p>
             For evaluating the system’s latency, a short impulse signal is captured at the input and output of the device simultaneously on different audio channels through an audio interface 
-            into a digital audio workstation. The difference in the signals’ time of arrival is then compared, where the difference is the total latency.   
+            into a digital audio workstation (<a class="link-light" href="https://www.audacityteam.org/">Audacity</a>). The difference in the signals’ time of arrival is then compared, where the difference is the total latency.   
         </p>
     </div>
 
@@ -45,14 +46,10 @@ include 'includes/header.php';
     <div class="d-flex gap-5 align-items-center mb-5">
         <img src="images/guitar_icon.png" class="tool-image">
         <p>
-            The primary external equipment used for testing includes an electric guitar in C-standard tuning with heavy gauge strings (12-60) and a dual 
-            Manson humbucker pickup set, as well as an Orange Crush 35RT solid-state guitar amplifier.    
+            The primary external equipment used for testing includes an electric guitar in <a class="link-light" href="https://en.wikipedia.org/wiki/C_tuning_(guitar)">C-standard</a> tuning with <a class="link-light" href="https://www.daddario.com/en-eu/products/nyxl1260-nyxl-electric-guitar-strings-nickel-wound-extra-heavy-12-60">heavy gauge strings (12-60)</a> and a dual 
+            <a class="link-light" href="https://www.mansonguitarworks.com/pickups">Manson humbucker pickup</a> set, as well as an <a class="link-light" href="https://orangeamps.com/products/crush-35rt">Orange Crush 35RT</a> solid-state guitar amplifier.    
         </p>
     </div>
-
-    <p>
-        Could add some clickable links to each of the software pages
-    </p>
 
 </main>
 

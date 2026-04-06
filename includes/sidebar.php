@@ -1,10 +1,9 @@
-<nav class="col-lg-2 bg-dark text-white vh-100 p-3">
+<nav class="col-lg-2 bg-dark text-white p-3">
     <a href="index.php" class="title-link">
         <h4>Multi-Effects Pedal (Thesis)</h4>
     </a>
     <ul class="nav flex-column">
 
-        <!-- could embed some videos or pictures throughout-->
         <li class="nav-item">
             <a class="nav-link" href="guitar-pedal.php">What is a Guitar Pedal?</a>
 

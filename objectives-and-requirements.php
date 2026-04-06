@@ -8,7 +8,7 @@ include 'includes/header.php';
     <h1 class="page-title">Objectives and Requirements</h1>
 
     <p>
-        This section explains ......
+        This section explains the structure of the device and essential functionality. 
     </p>
 
     <h4>Objectives</h4>
