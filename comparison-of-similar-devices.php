@@ -138,87 +138,89 @@ include 'includes/header.php';
             <img src="images/lang_pedal.png" class="device-image">
         </a>
     </div>
+    
 
-    <table class="comparison-table">
-        <tr>
-            <th>Name of Project/Product</th>
-            <th>MCU</th>
-            <th>Audio codec (ADC/DAC)</th>
-            <th>Number of effects</th>
-            <th>Multi-effects chain</th>
-            <th>Sampling/Reconstruction rate</th>
-            <th>Buffer size</th>
-            <th>ADC/DAC Resolution</th>
-            <th>Noise Gate</th>
-            <th>Bypass path</th>
-            <th>Latency</th>
-        </tr>
-        <tr>
-            <td>Madden</td>
-            <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f732ze.html">STM32F732ZET6</a></td>
-            <td><a class="link-light" href="https://www.ti.com/product/TLV320AIC23B">TLV320AIC23B</a></td>
-            <td>5+</td>
-            <td>Yes</td>
-            <td>48 kHz</td>
-            <td>128</td>
-            <td>16-bit </td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>1,3 ms</td>
-        </tr>
-        <tr>
-            <td>Dawson (101-Things)</td>
-            <td><a class="link-light" href="https://www.raspberrypi.com/products/raspberry-pi-pico/">Raspberry Pi Pico</a></td>
-            <td>Internal ADC/DAC</td>
-            <td>10</td>
-            <td>Yes</td>
-            <td>320 kHz/20 kHz</td>
-            <td>64</td>
-            <td>12-bit </td>
-            <td>No</td>
-            <td>No</td>
-            <td>3,2 ms</td>
-        </tr>
-        <tr>
-            <td>Åberg</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>3</td>
-            <td>Yes</td>
-            <td>96 kHz</td>
-            <td>512</td>
-            <td>24-bit</td>
-            <td>No</td>
-            <td>N/A</td>
-            <td>26,35 ms</td>
-        </tr>
-        <tr>
-            <td>Lang</td>
-            <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f446rc.html">STM32F446RC</a> </td>
-            <td><a class="link-light" href="https://www.ti.com/product/ADS8319">ADS8319</a>, <a class="link-light" href="https://www.ti.com/product/DAC8551">DAC8551</a></td>
-            <td>6</td>
-            <td>Yes</td>
-            <td>44.1 kHz</td>
-            <td>1</td>
-            <td>16-bit</td>
-            <td>No</td>
-            <td>Yes</td>
-            <td>&lt; 1 ms</td>
-        </tr>
-        <tr>
-            <td>Thesis</td>
-            <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h743-753.html">STM32H743</a></td>
-            <td>Internal ADC, <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a></td>
-            <td>6+</td>
-            <td>Yes</td>
-            <td>96 kHz</td>
-            <td>128</td>
-            <td>16-bit</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>1,3 ms</td>
-        </tr>
-    </table>
+        <table class="comparison-table">
+            <tr>
+                <th>Name of Project/Product</th>
+                <th>MCU</th>
+                <th>Audio codec (ADC/DAC)</th>
+                <th>Number of effects</th>
+                <th>Multi-effects chain</th>
+                <th>Sampling/Reconstruction rate</th>
+                <th>Buffer size</th>
+                <th>ADC/DAC Resolution</th>
+                <th>Noise Gate</th>
+                <th>Bypass path</th>
+                <th>Latency</th>
+            </tr>
+            <tr>
+                <td>Madden</td>
+                <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f732ze.html">STM32F732ZET6</a></td>
+                <td><a class="link-light" href="https://www.ti.com/product/TLV320AIC23B">TLV320AIC23B</a></td>
+                <td>5+</td>
+                <td>Yes</td>
+                <td>48 kHz</td>
+                <td>128</td>
+                <td>16-bit </td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>1,3 ms</td>
+            </tr>
+            <tr>
+                <td>Dawson (101-Things)</td>
+                <td><a class="link-light" href="https://www.raspberrypi.com/products/raspberry-pi-pico/">Raspberry Pi Pico</a></td>
+                <td>Internal ADC/DAC</td>
+                <td>10</td>
+                <td>Yes</td>
+                <td>320 kHz/20 kHz</td>
+                <td>64</td>
+                <td>12-bit </td>
+                <td>No</td>
+                <td>No</td>
+                <td>3,2 ms</td>
+            </tr>
+            <tr>
+                <td>Åberg</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>3</td>
+                <td>Yes</td>
+                <td>96 kHz</td>
+                <td>512</td>
+                <td>24-bit</td>
+                <td>No</td>
+                <td>N/A</td>
+                <td>26,35 ms</td>
+            </tr>
+            <tr>
+                <td>Lang</td>
+                <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f446rc.html">STM32F446RC</a> </td>
+                <td><a class="link-light" href="https://www.ti.com/product/ADS8319">ADS8319</a>, <a class="link-light" href="https://www.ti.com/product/DAC8551">DAC8551</a></td>
+                <td>6</td>
+                <td>Yes</td>
+                <td>44.1 kHz</td>
+                <td>1</td>
+                <td>16-bit</td>
+                <td>No</td>
+                <td>Yes</td>
+                <td>&lt; 1 ms</td>
+            </tr>
+            <tr>
+                <td>Thesis</td>
+                <td><a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h743-753.html">STM32H743</a></td>
+                <td>Internal ADC, <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a></td>
+                <td>6+</td>
+                <td>Yes</td>
+                <td>96 kHz</td>
+                <td>128</td>
+                <td>16-bit</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>1,3 ms</td>
+            </tr>
+        </table>
+
 
 </main>
 

@@ -1,7 +1,7 @@
-
 .title-link, .title-link:visited, .nav-link, .nav-link:visited, .link-light{
     color:inherit;
     text-decoration:none;
+    padding: 5px 0px;
 }
 
 .title-link:hover, .nav-link:hover, .link-light:hover{
@@ -63,7 +63,7 @@ main::before {
 main > * {
     position: relative;
     z-index: 1;
-    max-width: 1800px;
+    max-width: 100%;
     padding: 0 100px;
 }
 
@@ -86,14 +86,20 @@ h4{
     margin: 20px auto;
 }
 
+.me-image{
+    width: 300px;
+    height:auto;
+}
+
 .comparison-table{
-    width: 1600px;
     border-collapse: collapse;
     margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 .comparison-table th, .comparison-table td{
     border:1px solid white;
     padding: 4px;
     text-align: left;
+    font-size: small;
 }

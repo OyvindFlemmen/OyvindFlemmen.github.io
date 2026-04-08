@@ -1,6 +1,6 @@
-<nav class="col-lg-2 bg-dark text-white p-3">
+<nav class="sidebar col-lg-2 bg-dark text-white p-3">
     <a href="index.php" class="title-link">
-        <h4>Multi-Effects Pedal (Thesis)</h4>
+        <h4>Multi-Effects Pedal</h4>
     </a>
     <ul class="nav flex-column">
 
