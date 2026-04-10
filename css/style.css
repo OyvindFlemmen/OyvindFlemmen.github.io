@@ -149,3 +149,7 @@ h4{
 .audio-example{
     min-width: 350px;
 }
+
+.large-image{
+    max-width: 60vw;
+}

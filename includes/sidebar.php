@@ -38,7 +38,7 @@
                     <a class="nav-link" href="/device-structure/block-diagram.php">Block Diagram</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="/device-structure/chosen-components.php">Chosen Components</a>
+                    <a class="nav-link" href="/device-structure/design-conclusions.php">Design Conclusions</a>
                 </li>
                 <li>
                     <a class="nav-link" href="/device-structure/schematic.php">Schematic</a>

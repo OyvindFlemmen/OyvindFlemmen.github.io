@@ -11,10 +11,10 @@ include 'includes/header.php';
     </p>
 
     <div>
-        <a href="/device-structure/block-diagram.php" class="btn btn-structure">Block diagram</a>
-        <a href="/device-structure/chosen-components.php" class="btn btn-structure">Chosen components</a>
+        <a href="/device-structure/block-diagram.php" class="btn btn-structure">Block Diagram</a>
+        <a href="/device-structure/design-conclusions.php" class="btn btn-structure">Design Conclusions</a>
         <a href="/device-structure/schematic.php" class="btn btn-structure">Schematic</a>
-        <a href="/device-structure/pcb-layout.php" class="btn btn-structure">PCB layout</a>
+        <a href="/device-structure/pcb-layout.php" class="btn btn-structure">PCB Layout</a>
     </div>
 </main>
 
