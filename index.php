@@ -8,7 +8,9 @@ include 'includes/header.php';
     <h1 class="page-title">Low-Latency Embedded System for Real-Time Digital Guitar Effects</h1>
     <div class="page-text">
         <p>
-            Find some text to place here 
+            In this page, I've tried to outline the main structure of my bachelor's project, which focuses on building a digital multi-effects pedal. The navigation bar on the left takes
+            you to the different sections in which I discuss the purpose of the device, the design, the composition and justification, and the main sources and tools I've used in its creation.
+            Keep in mind that the device is not yet finished, so these are all subject to change at some point or another. 
         </p>
     </div>
 </main>

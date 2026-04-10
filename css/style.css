@@ -42,7 +42,7 @@ main {
     overflow: hidden;
     min-height: 100vh;
     color: white;
-
+    background:black; /*prevents white flash while images are loading*/
 }
 
 main::before {
@@ -89,6 +89,8 @@ h4{
 .me-image{
     width: 300px;
     height:auto;
+    mask-image: radial-gradient(circle, black 40%, transparent 100%);
+
 }
 
 .comparison-table{
@@ -102,4 +104,39 @@ h4{
     padding: 4px;
     text-align: left;
     font-size: small;
+}
+
+.socials a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  transform: translateY(-3px) scale(1.1);
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.socials a:nth-child(1):hover {
+    color:dodgerblue; /*linkedIn*/
+}
+.socials a:nth-child(2):hover {
+    color:blueviolet; /*GitHub*/
+}
+.socials a:nth-child(3):hover {
+    color:red; /*YouTube*/
+}
+
+.btn-structure {
+  background: #ffb753;
+  color: rgb(25, 25, 25);
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn-structure:hover {
+  background: #ffb347;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 159, 28, 0.4);
 }
