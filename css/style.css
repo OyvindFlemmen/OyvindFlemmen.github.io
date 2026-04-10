@@ -93,6 +93,11 @@ h4{
 
 }
 
+.pedal-image{
+    width: 130px;
+    height:auto;
+}
+
 .comparison-table{
     border-collapse: collapse;
     margin-left: 6rem;
@@ -139,4 +144,8 @@ h4{
   background: #ffb347;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 159, 28, 0.4);
+}
+
+.audio-example{
+    min-width: 350px;
 }
