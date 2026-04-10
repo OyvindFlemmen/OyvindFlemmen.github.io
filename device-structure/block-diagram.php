@@ -10,7 +10,7 @@ include '../includes/header.php';
         The block diagram shown below illustrates the signal path throughout the processing stages explained in previous sections, 
         as well as the relationships between the system’s main functional blocks. 
     </p>
-    <image class="large-image" src="/images/block_diagram.png"></image>
+    <a href="/images/block_diagram.png"><image class="large-image" src="/images/block_diagram.png"></image></a>
     <p>
         The analogue front-end block comprises the first stage of the signal conditioning, namely AC coupling and anti-alias filtering. The output of this stage is then biased and amplified by the 
         ADC conditioning block. In this block, a 1,65 V reference is derived from the 3,3 V LDO regulator, which in turn is powered by the 9 V supply. 

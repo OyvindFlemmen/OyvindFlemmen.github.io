@@ -152,4 +152,8 @@ h4{
 
 .large-image{
     max-width: 60vw;
+    max-height: 60vh;
+    object-fit: contain;
+    margin-left: 0;
+    margin-right: auto;
 }
