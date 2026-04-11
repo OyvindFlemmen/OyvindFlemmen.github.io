@@ -57,9 +57,12 @@
             <a class="nav-link" href="/main-sources.php">Main Sources</a>
         </li>
 
-
         <li class="nav-item">
             <a class="nav-link" href="/about-me.php">About Me</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/effect-sim.php">Effect Sim</a>
         </li>
     </ul>
 </nav>
