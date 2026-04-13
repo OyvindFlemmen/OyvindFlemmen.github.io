@@ -160,10 +160,19 @@ include 'includes/header.php';
                     </label>
                 </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-3 mb-4">
                 <audio id="demoPlayer" src="/audio/guitar_sample.wav" controls></audio>
                 <button id="generateButton" type="button" class="btn btn-success">Generate</button>
             </div>
+
+            <h5>Load Preset</h5>
+            <div id="presetButtonContainer">
+                <button class="btn btn-effect">some text</button>
+                <button class="btn btn-effect">some text</button>
+                <button class="btn btn-effect">some text</button>
+                <button class="btn btn-effect">some text</button>
+            </div>
+
         </div>
     </div>
 </main>

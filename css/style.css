@@ -133,14 +133,14 @@ h4{
     color:red; /*YouTube*/
 }
 
-.btn-structure {
+.btn-structure, .btn-pedal, .btn-effect {
   background: #ffb753;
   color: rgb(25, 25, 25);
   border: none;
   transition: all 0.25s ease;
 }
 
-.btn-structure:hover {
+.btn-structure:hover, .btn-pedal:hover, .btn-effect:hover {
   background: #ffb347;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 159, 28, 0.4);

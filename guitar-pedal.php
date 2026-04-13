@@ -15,8 +15,8 @@ include 'includes/header.php';
         </p>
 
     <div>
-        <a href="/guitar-pedal/analogue-versus-digital.php" class="btn btn-structure">Analogue Versus Digital Pedals</a>
-        <a href="/guitar-pedal/explanation.php" class="btn btn-structure">Explanation of Different Effects</a>
+        <a href="/guitar-pedal/analogue-versus-digital.php" class="btn btn-pedal">Analogue Versus Digital Pedals</a>
+        <a href="/guitar-pedal/explanation.php" class="btn btn-pedal">Explanation of Different Effects</a>
     </div>
 
 

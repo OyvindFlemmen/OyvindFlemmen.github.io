@@ -1,0 +1,24 @@
+{
+    "gain": {
+        "enabled": false,
+        "gain": 50,
+        "tone": 0.5
+    },
+    "tremolo": {
+        "enabled": false,
+        "frequency": 5,
+        "depth": 0.5
+    },
+    "chorus": {
+        "enabled": false,
+        "mix": 0.5,
+        "amplitude": 3,
+        "frequency": 0.5,
+        "delay": 20
+    },
+    "delay": {
+        "enabled": false,
+        "delay": 100,
+        "feedback": 0.5
+    }
+}

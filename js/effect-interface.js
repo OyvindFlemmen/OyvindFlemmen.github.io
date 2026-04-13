@@ -1,15 +1,6 @@
 const sampleRate = 44100;
 const samplePath = "/audio/guitar_sample.wav";
-const gainKnob = document.getElementById("gainKnob");
-const toneKnob = document.getElementById("toneKnob");
-const tremoloFrequencyKnob = document.getElementById("tremoloFrequencyKnob");
-const depthKnob = document.getElementById("depthKnob");
-const mixKnob = document.getElementById("mixKnob");
-const amplitudeKnob = document.getElementById("amplitudeKnob");
-const chorusFrequencyKnob = document.getElementById("chorusFrequencyKnob");
-const avgdelayKnob = document.getElementById("avgdelayKnob");
-const delayKnob = document.getElementById("delayKnob");
-const feedbackKnob = document.getElementById("feedbackKnob");
+const knobControllers = {};
 
 class WavData {
   constructor() {
@@ -118,20 +109,27 @@ function initializeKnob(knob) {
 
   let isDragging = false;
 
-  function setKnobRotation(val) {
+  function formatValue(val){
+    if(step<1){
+      const decimals = (step.toString().split(".")[1] || "").length;
+      return val.toFixed(decimals);
+    }
+    return Math.round(val);
+  }
+
+  function setValue(val){
+    value = Math.max(min, Math.min(max, val)); //clamp
     const minAngle = -135;
     const maxAngle = 135;
     const percent = (val - min) / (max - min);
     const angle = minAngle + percent * (maxAngle - minAngle);
 
     knob.style.transform = `rotate(${angle}deg)`;
+    valueDisplay.textContent = formatValue(value);
+  }
 
-    if (step < 1) {
-      const decimals = (step.toString().split(".")[1] || "").length;
-      valueDisplay.textContent = val.toFixed(decimals);
-    } else {
-      valueDisplay.textContent = Math.round(val);
-    }
+  function getValue(){
+    return value;
   }
 
   knob.addEventListener("mousedown", (e) => {
@@ -152,19 +150,18 @@ function initializeKnob(knob) {
     value += e.movementX * sensitivity;
     value = Math.max(min, Math.min(max, value)); //clamp
 
-    setKnobRotation(value);
+    setValue(value);
   });
 
-  setKnobRotation(value);
+  setValue(value);
+
+  return{setValue, getValue};
 }
 
 function applyGain(samples) {
-  const gain = parseFloat(
-    document.getElementById(gainKnob.dataset.valueId).textContent,
-  );
-  const tone = parseFloat(
-    document.getElementById(toneKnob.dataset.valueId).textContent,
-  );
+  const gain = knobControllers.gainKnob.getValue();
+  const tone = knobControllers.toneKnob.getValue();
+
 
   const MAX = 32767;
 
@@ -190,12 +187,8 @@ function applyGain(samples) {
 }
 
 function applyTremolo(samples) {
-  const depth = parseFloat(
-    document.getElementById(depthKnob.dataset.valueId).textContent,
-  );
-  const frequency = parseFloat(
-    document.getElementById(tremoloFrequencyKnob.dataset.valueId).textContent,
-  );
+  const depth = knobControllers.depthKnob.getValue();
+  const frequency = knobControllers.tremoloFrequencyKnob.getValue();
   const amplitude = depth * 0.5;
 
   console.log(depth);
@@ -208,18 +201,10 @@ function applyTremolo(samples) {
 }
 
 function applyChorus(samples) {
-  const mix = parseFloat(
-    document.getElementById(mixKnob.dataset.valueId).textContent,
-  );
-  const amplitude = parseFloat(
-    document.getElementById(amplitudeKnob.dataset.valueId).textContent,
-  );
-  const frequency = parseFloat(
-    document.getElementById(chorusFrequencyKnob.dataset.valueId).textContent,
-  );
-  const avgdelay = parseFloat(
-    document.getElementById(avgdelayKnob.dataset.valueId).textContent,
-  );
+  const mix = knobControllers.mixKnob.getValue();
+  const amplitude = knobControllers.amplitudeKnob.getValue();
+  const frequency = knobControllers.chorusFrequencyKnob.getValue();
+  const avgdelay = knobControllers.avgdelayKnob.getValue();
 
   const d0 = (avgdelay / 1000) * sampleRate;
   const a = (amplitude / 1000) * sampleRate;
@@ -258,12 +243,8 @@ function applyChorus(samples) {
 }
 
 function applyDelay(samples) {
-  const delay = parseFloat(
-    document.getElementById(delayKnob.dataset.valueId).textContent,
-  );
-  const feedback = parseFloat(
-    document.getElementById(feedbackKnob.dataset.valueId).textContent,
-  );
+  const delay = knobControllers.delayKnob.getValue();
+  const feedback = knobControllers.feedbackKnob.getValue();
 
   const d = Math.floor((delay / 1000) * sampleRate);
 
@@ -319,10 +300,67 @@ async function GenerateAudio() {
   const audioPlayer = document.getElementById("demoPlayer");
   audioPlayer.src = url;
   audioPlayer.load();
-
 }
 
+function applyPreset(preset){
+  console.log(preset);
+  //gain
+  knobControllers.gainKnob.setValue(preset.settings.gain.gain);
+  knobControllers.toneKnob.setValue(preset.settings.gain.tone);
+  document.getElementById("gainSwitch").checked = preset.settings.gain.enabled;
+  //tremolo
+  knobControllers.tremoloFrequencyKnob.setValue(preset.settings.tremolo.frequency);
+  knobControllers.depthKnob.setValue(preset.settings.tremolo.depth);
+  document.getElementById("tremoloSwitch").checked = preset.settings.tremolo.enabled;
+  //chorus
+  knobControllers.mixKnob.setValue(preset.settings.chorus.mix);
+  knobControllers.amplitudeKnob.setValue(preset.settings.chorus.amplitude);
+  knobControllers.chorusFrequencyKnob.setValue(preset.settings.chorus.frequency);
+  knobControllers.avgdelayKnob.setValue(preset.settings.chorus.delay);
+  document.getElementById("chorusSwitch").checked = preset.settings.chorus.enabled;
+  //delay
+  knobControllers.delayKnob.setValue(preset.settings.delay.delay);
+  knobControllers.feedbackKnob.setValue(preset.settings.delay.feedback);
+  document.getElementById("delaySwitch").checked = preset.settings.delay.enabled;
+}
+
+
+function renderPresetButtons(presets) {
+  const container = document.getElementById("presetButtonContainer");
+  
+  container.innerHTML = '';
+  
+  presets.forEach((preset) =>{
+    const button = document.createElement('button');
+    button.type='button';
+    button.className = 'btn btn-effect m-1';
+    button.textContent = preset.name;
+    button.id = `preset-btn-${preset.id}`;
+    
+    button.addEventListener('click', () => applyPreset(preset));
+    container.appendChild(button);
+  });
+}
+
+async function loadPresets() {
+  try {
+    const response = await fetch("includes/load-presets.php");
+    const data = await response.json();
+
+    if (!data.success) {
+      console.error(data.message);
+      return;
+    }
+
+    //console.log(data.presets);
+    renderPresetButtons(data.presets);
+  } catch (error) {
+    console.error("Failed to load presets:", error);
+  }
+}
+
+loadPresets();
 document
   .getElementById("generateButton")
   .addEventListener("click", GenerateAudio);
-document.querySelectorAll(".knob").forEach(initializeKnob);
+document.querySelectorAll(".knob").forEach((knob) => {knobControllers[knob.id] = initializeKnob(knob)});
