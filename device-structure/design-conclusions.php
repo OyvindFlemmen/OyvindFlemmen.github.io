@@ -40,8 +40,8 @@ include '../includes/header.php';
         differential mode. Thus, to achieve a better signal to noise ratio, the analogue signal shall be sampled in differential mode. 
     </p>
     <p>
-        A <a class="light-link" href="https://www.ti.com/product/DAC8830">DAC8830</a> will be used in place of the internal DAC of the STM32H7, as the integrated converter only provides a 
-        resolution of 12 bits. The <a class="light-link" href="https://www.ti.com/product/DAC8830">DAC8830</a>, based on a resistor string architecture, 
+        A <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a> will be used in place of the internal DAC of the STM32H7, as the integrated converter only provides a 
+        resolution of 12 bits. The <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a>, based on a resistor string architecture, 
         provides a monotonic, low-glitch 16-bit resolution, making it a suitable choice for audio reproduction. A 3-wire serial interface is used to communicate with the MCU; it is compatible 
         with several standards, including SPI, which will be used for this project. The device specifies a settling time of 10 µs, meaning that it can comfortably handle the minimum 
         reconstruction rate of 44.1 kHz. A sampling rate of 96 kHz corresponds to a sample period of approximately 10,41 µs, thus falling within the specified settling time.  
