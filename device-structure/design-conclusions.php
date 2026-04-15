@@ -34,13 +34,14 @@ include '../includes/header.php';
     </p>
     <h4>DAC</h4>
     <p>
-        An advantage of the STM32H7 series in comparison to the STM32F7 series is that it features a 16-bit internal SAR ADC, rather than a 12-bit one. Therefore, although the 
-        STM32H7 series microcontrollers are generally sold at a higher price point than the STM32F7 series, this is offset by the integrated 16-bit ADC, which eliminates the need for an 
-        external converter to achieve a higher resolution. However, the ENOB of the STM32H7 series ADC is somewhat lower than 16-bits, typically around 12,8 in single-ended mode and 13,7 in 
+        An advantage of the <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h7-series.html">STM32H7</a> series in comparison to the 
+        <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f7-series.html">STM32F7</a> series is that it features a 16-bit internal SAR ADC, rather than a 12-bit one. Therefore, although the 
+        <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h7-series.html">STM32H7</a> series microcontrollers are generally sold at a higher price point than the <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32f7-series.html">STM32F7</a> series, this is offset by the integrated 16-bit ADC, which eliminates the need for an 
+        external converter to achieve a higher resolution. However, the ENOB of the <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h7-series.html">STM32H7</a> series ADC is somewhat lower than 16-bits, typically around 12,8 in single-ended mode and 13,7 in 
         differential mode. Thus, to achieve a better signal to noise ratio, the analogue signal shall be sampled in differential mode. 
     </p>
     <p>
-        A <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a> will be used in place of the internal DAC of the STM32H7, as the integrated converter only provides a 
+        A <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a> will be used in place of the internal DAC of the <a class="link-light" href="https://www.st.com/en/microcontrollers-microprocessors/stm32h7-series.html">STM32H7</a>, as the integrated converter only provides a 
         resolution of 12 bits. The <a class="link-light" href="https://www.ti.com/product/DAC8830">DAC8830</a>, based on a resistor string architecture, 
         provides a monotonic, low-glitch 16-bit resolution, making it a suitable choice for audio reproduction. A 3-wire serial interface is used to communicate with the MCU; it is compatible 
         with several standards, including SPI, which will be used for this project. The device specifies a settling time of 10 µs, meaning that it can comfortably handle the minimum 

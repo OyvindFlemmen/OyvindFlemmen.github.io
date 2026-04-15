@@ -159,7 +159,6 @@ h4{
 }
 
 .effect-panel{
-    width: 400px;
     display:flex;
     flex-direction: column;
 }

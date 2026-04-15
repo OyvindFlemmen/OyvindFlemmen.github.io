@@ -10,7 +10,7 @@ include 'includes/header.php';
         <div class="container-fluid bg-dark text-light pb-4">
             <div class="row h-100 mb-4">
 
-                <div class="border effect-panel">
+                <div class="col-md-6 effect-panel border">
                     <h5 class="mb-4">Gain</h5>
 
 
@@ -44,7 +44,7 @@ include 'includes/header.php';
                     </label>
                 </div>
 
-                <div class="border effect-panel">
+                <div class="col-md-6 effect-panel border">
                     <h5 class="mb-4">Tremolo</h5>
 
                     <div class="knob-grid mb-4">
@@ -77,7 +77,7 @@ include 'includes/header.php';
                     </label>
                 </div>
 
-                <div class="border effect-panel">
+                <div class="col-md-6 effect-panel border">
                     <h5 class="mb-4">Chorus</h5>
 
                     <div class="knob-grid mb-4">
@@ -129,7 +129,7 @@ include 'includes/header.php';
                     </label>
                 </div>
 
-                <div class="border effect-panel">
+                <div class="col-md-6 effect-panel border">
                     <h5 class="mb-4">Delay</h5>
 
                     <div class="knob-grid mb-4">
